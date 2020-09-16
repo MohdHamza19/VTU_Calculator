@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Index</title>
+
+    <style>
+        body,html
+        {
+            overflow-x: hidden;
+            width:100%;
+            height:100%
+        }
+    </style>
+</head>
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">VTU</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/">Calculator <span class="sr-only">(current)</span></a>
+          </li>
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="#">Features</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="#">Pricing</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+<!--          </li>-->
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron rounded-0 my-2 " style="padding-bottom:10px; padding-top:10px">
+      <h1 class="display-6">VTU CPGA Converter</h1>
+      <p>This is a simple website to easily convert CPGA, SGPA, Percentage into one another! </p>
+      <hr>
+    </div>
+<!--    <div class="row">-->
+<!--        <div class="container col-md-6">-->
+<!--        </div>-->
+<!--        <div class="container col-md-6">-->
+<!--            <form>-->
+<!--              <div class="form-group">-->
+<!--                <label for="percentage">Percentage</label>-->
+<!--                <input type="text" class="form-control" id="percentage" aria-describedby="percentageHelp">-->
+<!--                <small id="percentageHelp" class="form-text text-muted">Enter your percentage to get CGPA as per VTU.</small>-->
+<!--              </div>-->
+<!--              <button type="button" class="btn btn-dark" onclick="res()">Submit</button>-->
+<!--              <div class="form-group mt-2">-->
+<!--                <label for="ans">CGPA</label>-->
+<!--                <input type="text" class="form-control" id="ans" aria-describedby="ansHelp" value="Answer" disabled>-->
+<!--                <small id="ansHelp" class="form-text text-muted">Result will appear here.</small>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--        </div>-->
+    </div>
+
+<!--    <div class="d-md-flex flex-md-equal w-100 mt-3">-->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="container col-md-6 mt-2">
+          <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="border-radius:5px">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Percentage to CGPA</h2>
+              <p class="lead">Simply enter your percentage to get your CGPA instantly!</p>
+            </div>
+<!--            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>-->
+            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 280px; border-radius: 21px 21px 0 0;">
+                <form>
+                  <div class="form-group mx-3">
+                      <label for="percentage" style="color:#343A40" class="mt-2"><b>Percentage</b></label>
+                    <input type="text" class="form-control" id="percentage" aria-describedby="percentageHelp">
+                    <small id="percentageHelp" class="form-text text-muted">Enter your percentage to get CGPA as per VTU.</small>
+                  </div>
+                  <button type="button" class="btn btn-dark" onclick="res()">Submit</button>
+                  <div class="form-group mx-3 mt-2">
+                    <label for="ans" style="color:#343A40"><b>CGPA</b></label>
+                    <input type="text" class="form-control" id="ans" aria-describedby="ansHelp" value="Answer" disabled>
+                    <small id="ansHelp" class="form-text text-muted">Result will appear here.</small>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="container col-md-6 mt-2">
+            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="border-radius:5px">
+            <div class="my-3 py-3">
+              <h2 class="display-5">CGPA to percentage</h2>
+              <p class="lead">Simply enter your CGPA to get your percentage instantly!</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 280px; border-radius: 21px 21px 0 0;">
+                <form>
+                  <div class="form-group mx-3">
+                      <label for="cgpa" style="color:#F8F9FA" class="mt-2"><b>CGPA</b></label>
+                    <input type="text" class="form-control" id="cgpa" aria-describedby="cgpa">
+                    <small id="cgpaHelp" class="form-text text-muted">Enter your percentage to get CGPA as per VTU.</small>
+                  </div>
+                  <button type="button" class="btn btn-light" onclick="res1()">Submit</button>
+                  <div class="form-group mx-3 mt-2">
+                    <label for="ans1" style="color:#F8F9FA"><b>Percentage</b></label>
+                    <input type="text" class="form-control" id="ans1" aria-describedby="ansHelp1" value="Answer" disabled>
+                    <small id="ansHelp1" class="form-text text-muted">Result will appear here.</small>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid mx-4 mt-2 col-md-8 col-sm-12 col-xs-12"  style="border-radius:5px; background-color:#F8F9FA">
+            <h4>SGPA Calculator</h4>
+            <p>Put 0 if not applicable/not required</p>
+<!--            <form class="form-inline">-->
+<!--                <div class="form-group mx-3">-->
+<!--                    <label for="sub" class="mx-2">Select number of subjects </label>-->
+<!--                    <select class="form-control" id="sub">-->
+<!--                      <option>1</option>-->
+<!--                      <option selected>2</option>-->
+<!--                      <option>3</option>-->
+<!--                      <option>4</option>-->
+<!--                      <option>5</option>-->
+<!--                      <option>6</option>-->
+<!--                      <option>7</option>-->
+<!--                      <option>8</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-primary" onclick="num_sub()">Submit</button>-->
+<!--            </form>-->
+    <!--    </div>-->
+
+    <!--    <div class="container-fluid mx-1">-->
+            <form id="gp_n_cr">
+              <div class="row my-2">
+                <div class="col">
+                  <input type="text" readonly class="form-control-plaintext" value="Credits" disabled>
+                </div>
+                <div class="col">
+                  <input type="text" readonly class="form-control-plaintext" value="Grade Points" disabled>
+                </div>
+              </div>
+<!--                BELOW-->
+              <span id="numbr">
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr1" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp1" class="form-control" placeholder="1st Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr2" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp2" class="form-control" placeholder="2nd Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr3" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp3" class="form-control" placeholder="3rd Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr4" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp4" class="form-control" placeholder="4th Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr5" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp5" class="form-control" placeholder="5th Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr6" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp6" class="form-control" placeholder="6th Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr7" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp7" class="form-control" placeholder="7th Sub Grade point">
+                </div>
+              </div>
+              <div class="row my-2">
+                <div class="col">
+                  <input type="number" id="cr8" class="form-control" placeholder="Credits">
+                </div>
+                <div class="col">
+                  <input type="number" id="gp8" class="form-control" placeholder="8th Sub Grade point">
+                </div>
+              </div>
+              </span>
+                <ul>
+                    <li><p>Please fill ALL the fields</p></li>
+                </ul>
+              <button type="submit" class="btn btn-dark" onclick="sgpa_cal()">Calculate</button>
+              <div class="form-group col-md-6">
+                  <label for="sgpa_ans" style="color:#F8F9FA"><b>Percentage</b></label>
+                  <input type="text" class="form-control" id="sgpa_ans" aria-describedby="sgpa_ansHelp" value="Result" disabled>
+                  <small id="sgpa_ansHelp" class="form-text text-muted">SGPA will appear here</small>
+              </div>
+            </form>
+            <br>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+
+        </div>
+    </div>
+    <script>
+        function sgpa_cal()
+        {
+            var gp_1 = document.getElementById("gp1").value;
+            var cr_1 = document.getElementById("cr1").value;
+            var gc_1 = gp_1 * cr_1
+
+            var gp_2 = document.getElementById("gp2").value;
+            var cr_2 = document.getElementById("cr2").value;
+            var gc_2 = gp_2 * cr_2
+
+            var gp_3 = document.getElementById("gp3").value;
+            var cr_3 = document.getElementById("cr3").value;
+            var gc_3 = gp_3 * cr_3;
+
+            var gp_4 = document.getElementById("gp4").value;
+            var cr_4 = document.getElementById("cr4").value;
+            var gc_4 = gp_4 * cr_4;
+
+            var gp_5 = document.getElementById("gp5").value;
+            var cr_5 = document.getElementById("cr5").value;
+            var gc_5 = gp_5 * cr_5;
+
+            var gp_6 = document.getElementById("gp6").value;
+            var cr_6 = document.getElementById("cr6").value;
+            var gc_6 = gp_6 * cr_6;
+
+            var gp_7 = document.getElementById("gp7").value;
+            var cr_7 = document.getElementById("cr7").value;
+            var gc_7 = gp_7 * cr_7;
+
+            var gp_8 = document.getElementById("gp8").value;
+            var cr_8 = document.getElementById("cr8").value;
+            var gc_8 = gp_8 * cr_8;
+
+            var gp_total = gc_1 + gc_2 + gc_3 + gc_4 + gc_5 + gc_6 + gc_7 + gc_8
+            console.log(gp_total)
+            var cr_total = parseInt(cr_1) + parseInt(cr_2) + parseInt(cr_3) + parseInt(cr_4) + parseInt(cr_5) + parseInt(cr_6) + parseInt(cr_7) + parseInt(cr_8)
+            console.log(cr_total)
+
+            var sgpa_final = gp_total/cr_total
+
+            document.getElementById('sgpa_ans').setAttribute('value', sgpa_final);
+        }
+
+<!--        function num_sub()-->
+<!--        {-->
+<!--            var num_of_sub = document.getElementById("sub").value;-->
+<!--            console.log(num_of_sub)-->
+<!--            if (num_of_sub == 1)-->
+<!--            {-->
+<!--                document.getElementById('numbr').innerHTML='<div class="row my-2"><div class="col"><input type="number" class="form-control" placeholder="1st Sub Grade point"></div><div class="col"><input type="text" class="form-control" placeholder="Credits"></div></div>'-->
+<!--            }-->
+<!--        }-->
+
+        function res()
+        {
+            var percentge = document.getElementById("percentage").value;
+            var answer = (percentge/10) + 0.75;
+            var chk = percentge
+            answer = answer.toString().slice(0, 4);
+            answer = answer + " CGPA"
+            if (chk > 100)
+            {
+                var eror = "Enter value between 1 and 100."
+                document.getElementById('ans').setAttribute('value', eror);
+            }
+            else
+            {
+                document.getElementById('ans').setAttribute('value', answer);
+            }
+        }
+        function res1()
+        {
+            var cgpa = document.getElementById("cgpa").value;
+            var anser = (cgpa - 0.75) * 10
+            var check = cgpa
+            anser = anser.toString().slice(0, 5);
+            anser = anser + " Percentage"
+            if (check > 10)
+            {
+                var error = "Enter value between 1 and 10."
+                document.getElementById('ans1').setAttribute('value', error);
+            }
+            else
+            {
+                document.getElementById('ans1').setAttribute('value', anser);
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
