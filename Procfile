@@ -1,0 +1,1 @@
+web: gunicorn cgpa.wsgi --log-file -
