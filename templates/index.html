@@ -28,15 +28,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="http://127.0.0.1:8000/">Calculator <span class="sr-only">(current)</span></a>
           </li>
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">Features</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">Pricing</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--          </li>-->
         </ul>
       </div>
     </nav>
@@ -65,7 +56,6 @@
 <!--        </div>-->
     </div>
 
-<!--    <div class="d-md-flex flex-md-equal w-100 mt-3">-->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="container col-md-6 mt-2">
           <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="border-radius:5px">
@@ -73,7 +63,6 @@
               <h2 class="display-5">Percentage to CGPA</h2>
               <p class="lead">Simply enter your percentage to get your CGPA instantly!</p>
             </div>
-<!--            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>-->
             <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 280px; border-radius: 21px 21px 0 0;">
                 <form>
                   <div class="form-group mx-3">
@@ -137,7 +126,6 @@
 <!--            </form>-->
     <!--    </div>-->
 
-    <!--    <div class="container-fluid mx-1">-->
             <form id="gp_n_cr">
               <div class="row my-2">
                 <div class="col">
@@ -217,7 +205,7 @@
                 <ul>
                     <li><p>Please fill ALL the fields</p></li>
                 </ul>
-              <button type="submit" class="btn btn-dark" onclick="sgpa_cal()">Calculate</button>
+              <button type="button" class="btn btn-dark" onclick="sgpa_cal()">Calculate</button>
               <div class="form-group col-md-6">
                   <label for="sgpa_ans" style="color:#F8F9FA"><b>Percentage</b></label>
                   <input type="text" class="form-control" id="sgpa_ans" aria-describedby="sgpa_ansHelp" value="Result" disabled>
@@ -274,16 +262,6 @@
 
             document.getElementById('sgpa_ans').setAttribute('value', sgpa_final);
         }
-
-<!--        function num_sub()-->
-<!--        {-->
-<!--            var num_of_sub = document.getElementById("sub").value;-->
-<!--            console.log(num_of_sub)-->
-<!--            if (num_of_sub == 1)-->
-<!--            {-->
-<!--                document.getElementById('numbr').innerHTML='<div class="row my-2"><div class="col"><input type="number" class="form-control" placeholder="1st Sub Grade point"></div><div class="col"><input type="text" class="form-control" placeholder="Credits"></div></div>'-->
-<!--            }-->
-<!--        }-->
 
         function res()
         {
